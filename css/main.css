@@ -331,6 +331,32 @@
 		        transform: translateX(-50%);
 	}
 /* ----------ANIMATION------ */
+	#dynamicBg,
+	#bg,
+	#body,
+	#content{opacity: 0;}
+	.loaded #body,
+	.loaded #content{
+		-webkit-animation: fadeIn .8s forwards;
+		   -moz-animation: fadeIn .8s forwards;
+		    -ms-animation: fadeIn .8s forwards;
+		     -o-animation: fadeIn .8s forwards;
+		        animation: fadeIn .8s forwards;
+	}
+	.loaded #bg{
+		-webkit-animation: fadeIn .8s .3s forwards;
+		   -moz-animation: fadeIn .8s .3s forwards;
+		    -ms-animation: fadeIn .8s .3s forwards;
+		     -o-animation: fadeIn .8s .3s forwards;
+		        animation: fadeIn .8s .3s forwards;
+	}
+	.loaded #dynamicBg{
+		-webkit-animation: fadeInUp 1s .8s forwards;
+		   -moz-animation: fadeInUp 1s .8s forwards;
+		    -ms-animation: fadeInUp 1s .8s forwards;
+		     -o-animation: fadeInUp 1s .8s forwards;
+		        animation: fadeInUp 1s .8s forwards;
+	}
 	@-webkit-keyframes  fadeIn  {
 		0% {opacity : 0; }
 		100% {opacity : 1; }

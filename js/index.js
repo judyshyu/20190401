@@ -1,4 +1,8 @@
 $(function(){
+
+	$(window).on('load', function(){
+		$('body').addClass('loaded');
+	})
 	var indexBody = $('#index'),
 		dynamicBg = $('#dynamicBg');
 
