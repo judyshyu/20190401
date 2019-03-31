@@ -334,7 +334,13 @@
 	#dynamicBg,
 	#bg,
 	#body,
-	#content{opacity: 0;}
+	#content,
+	#bg img.shine,
+	#bg img.circle-1,
+	#bg img.circle-2,
+	#bg img.circle-3{opacity: 0;}
+
+
 	.loaded #body,
 	.loaded #content{
 		-webkit-animation: fadeIn .8s forwards;
@@ -350,12 +356,40 @@
 		     -o-animation: fadeIn .8s .3s forwards;
 		        animation: fadeIn .8s .3s forwards;
 	}
+	#bg img.shine{
+		-webkit-animation: fadeInShrink .8s .3s forwards;
+		   -moz-animation: fadeInShrink .8s .3s forwards;
+		    -ms-animation: fadeInShrink .8s .3s forwards;
+		     -o-animation: fadeInShrink .8s .3s forwards;
+		        animation: fadeInShrink .8s .3s forwards;
+	}
+	#bg img.circle-3{
+		-webkit-animation: fadeInShrink .8s .8s forwards;
+		   -moz-animation: fadeInShrink .8s .8s forwards;
+		    -ms-animation: fadeInShrink .8s .8s forwards;
+		     -o-animation: fadeInShrink .8s .8s forwards;
+		        animation: fadeInShrink .8s .8s forwards;
+	}
+	#bg img.circle-2{
+		-webkit-animation: fadeInShrink .5s 1.2s forwards;
+		   -moz-animation: fadeInShrink .5s 1.2s forwards;
+		    -ms-animation: fadeInShrink .5s 1.2s forwards;
+		     -o-animation: fadeInShrink .5s 1.2s forwards;
+		        animation: fadeInShrink .5s 1.2s forwards;
+	}
+	#bg img.circle-1{
+		-webkit-animation: fadeInShrink .4s 1.5s forwards;
+		   -moz-animation: fadeInShrink .4s 1.5s forwards;
+		    -ms-animation: fadeInShrink .4s 1.5s forwards;
+		     -o-animation: fadeInShrink .4s 1.5s forwards;
+		        animation: fadeInShrink .4s 1.5s forwards;
+	}
 	.loaded #dynamicBg{
-		-webkit-animation: fadeInUp 1s .8s forwards;
-		   -moz-animation: fadeInUp 1s .8s forwards;
-		    -ms-animation: fadeInUp 1s .8s forwards;
-		     -o-animation: fadeInUp 1s .8s forwards;
-		        animation: fadeInUp 1s .8s forwards;
+		-webkit-animation: fadeIn 1.5s 1.5s forwards;
+		   -moz-animation: fadeIn 1.5s 1.5s forwards;
+		    -ms-animation: fadeIn 1.5s 1.5s forwards;
+		     -o-animation: fadeIn 1.5s 1.5s forwards;
+		        animation: fadeIn 1.5s 1.5s forwards;
 	}
 	@-webkit-keyframes  fadeIn  {
 		0% {opacity : 0; }
@@ -369,35 +403,22 @@
 		-webkit-animation-name : fadeIn  ;
 		animation-name : fadeIn  ;
 	}
-	.fadeInUp  {
-		-webkit-animation: fadeInUp .5s forwards;
-		-o-animation: fadeInUp .5s forwards;
-		animation: fadeInUp .5s forwards;
-	}
-	@-webkit-keyframes fadeInUp {
-		from {
-			opacity: 0;
-			-webkit-transform: translate3d(0, 20px, 0);
-			transform: translate3d(0, 20px, 0);
+	@keyframes  fadeInShrink  {
+		0% {
+			opacity : 0;
+			-webkit-transform: scale(.5);
+			   -moz-transform: scale(.5);
+			    -ms-transform: scale(.5);
+			     -o-transform: scale(.5);
+			        transform: scale(.5);
 		}
-
-		to {
-			opacity: 1;
-			-webkit-transform: translate3d(0, 0, 0);
-			transform: translate3d(0, 0, 0);
-		}
-	}
-	@keyframes fadeInUp {
-		from {
-			opacity: 0;
-			-webkit-transform: translate3d(0, 20px, 0);
-			transform: translate3d(0, 20px, 0);
-		}
-
-		to {
-			opacity: 1;
-			-webkit-transform: translate3d(0, 0, 0);
-			transform: translate3d(0, 0, 0);
+		100% {
+			opacity : 1;
+			-webkit-transform: scale(1);
+			   -moz-transform: scale(1);
+			    -ms-transform: scale(1);
+			     -o-transform: scale(1);
+			        transform: scale(1);
 		}
 	}
 /* ----------BG------------- */
